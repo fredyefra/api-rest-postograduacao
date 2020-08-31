@@ -1,6 +1,6 @@
 api-rest-postograduacao: Assortment of technologies including Arquillian
 ========================
-Author: Pete Muir
+Author: Fred
 Level: Intermediate
 Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
 Summary: An example that incorporates multiple technologies
