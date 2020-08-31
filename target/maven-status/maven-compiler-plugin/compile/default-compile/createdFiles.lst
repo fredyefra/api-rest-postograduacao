@@ -1,0 +1,15 @@
+br/com/rest/fab/util/Response.class
+br/com/rest/fab/model/Soldo.class
+br/com/rest/fab/util/FabResources.class
+br/com/rest/fab/model/ImagemInsigniaFAB.class
+br/com/rest/fab/dao/impl/GenericDao.class
+br/com/rest/fab/dao/IGenericDao.class
+br/com/rest/fab/model/PostoGraduacao.class
+br/com/rest/fab/model/Patente_.class
+br/com/rest/fab/model/ImagemInsigniaFAB_.class
+br/com/rest/fab/model/PostoGraduacao_.class
+br/com/rest/fab/util/EntityBase.class
+br/com/rest/fab/model/Soldo_.class
+br/com/rest/fab/servidor/Servidor.class
+br/com/rest/fab/model/Patente.class
+br/com/rest/fab/util/ApplicationWS.class

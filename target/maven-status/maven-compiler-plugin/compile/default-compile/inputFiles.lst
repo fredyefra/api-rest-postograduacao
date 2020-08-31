@@ -1,0 +1,11 @@
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/model/Soldo.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/model/PostoGraduacao.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/util/EntityBase.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/model/ImagemInsigniaFAB.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/model/Patente.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/util/Response.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/util/FabResources.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/dao/IGenericDao.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/servidor/Servidor.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/util/ApplicationWS.java
+/home/fredye/workspace/api-rest-postograduacao/src/main/java/br/com/rest/fab/dao/impl/GenericDao.java
