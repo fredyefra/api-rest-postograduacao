@@ -7,7 +7,7 @@
 	<persistence-unit name="PERSISTENCE_UNIT_FAB">
 
 		<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!--  <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
 		<!-- <jta-data-source>java:jboss/datasources/api-rest-postograduacaoDS</jta-data-source> -->
 		
 		<class>br.com.rest.fab.model.PostoGraduacao</class>
@@ -22,11 +22,11 @@
             <property name="javax.persistence.jdbc.password" value="52xmax!" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			
-			
 			<!-- Aqui o trecho original --> 
 			<!-- <property name="hibernate.hbm2ddl.auto" value="update" /> -->
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" /> -->
 			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" /> 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
 		    <property name="hibernate.format_sql" value="true"/>
 			
 		</properties>
