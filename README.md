@@ -1,11 +1,9 @@
-api-rest-postograduacao: Assortment of technologies including Arquillian
+api-rest-postograduacao 
 ========================
-Author: Fred
-Level: Intermediate
-Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
-Summary: An example that incorporates multiple technologies
-Target Project: WildFly
-Source: <https://github.com/wildfly/quickstart/>
+Autor: Fred
+Nível: Intermediário
+Tecnologias: CDI WELD, JSF, HIBERNATE JPA , EJB, JPA, JAX-RS e Jersey
+Resumo: WebService RESTful com os postos e graduações dos militares das forças armadas.
 
 What is it?
 -----------

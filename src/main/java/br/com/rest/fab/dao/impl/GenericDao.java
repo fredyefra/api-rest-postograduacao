@@ -91,9 +91,7 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
         return query.getSingleResult();
 	}
 
-	
-	
-	@Override
+    @Override
 	public List<PostoGraduacao> findByPatente(String patentes) {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<PostoGraduacao> cq = cb.createQuery(PostoGraduacao.class);
