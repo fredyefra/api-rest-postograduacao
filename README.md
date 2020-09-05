@@ -2,16 +2,16 @@
 ** api-rest-postograduacao ** 
 =============================
 
-* WebService RESTful java com os postos e graduações das carreiras das foças armadas. *
-* Tecnologias: CDI WELD, JSF, HIBERNATE JPA, JPA, JAX-RS e Jersey
-Resumo: WebService RESTful com os postos e graduações dos militares das forças armadas.
+* WebService RESTful java com os postos e graduações das carreiras das foças armadas. 
+* Tecnologias: CDI WELD, JSF, HIBERNATE JPA, JPA, JAX-RS e Jersey.
+
 
  | What is it? |
  | ----------- |
 
 
-![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)
-
+*![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)
+* ![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)
 
 This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly.
 
