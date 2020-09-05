@@ -6,9 +6,9 @@
 * Tecnologias: CDI WELD, JSF, HIBERNATE JPA, JPA, JAX-RS e Jersey.
 
 
- | What is it? |
- | ----------- |
-
+ | What is it?                                                      |
+ | ----------                                                       |
+ | ![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)|
 
 *![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)
 * ![](src/main/webapp/resources/image/1-Tenente-brigadeiro_FAB.jpg)
