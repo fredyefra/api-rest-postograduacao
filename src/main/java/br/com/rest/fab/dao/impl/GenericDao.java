@@ -25,7 +25,7 @@ import br.com.rest.fab.util.EntityBase;
 @Stateless
 public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IGenericDao<T> {
 
-	@PersistenceContext(name = "PERSISTENCE_UNIT_FAB")
+	@PersistenceContext(name = "POSTO_GRADUACAO_PU")
 	private EntityManager em;
 
 	@Override
@@ -60,7 +60,6 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 	    PostoGraduacao postoGraduacao = em.find(PostoGraduacao.class, param);  	
 		em.remove(postoGraduacao);
 	}
-	
 	
 	@Override
 	public PostoGraduacao findByRemuneracao(String remuneracao) {
@@ -123,12 +122,9 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 		Root<PostoGraduacao> root = cq.from(PostoGraduacao.class);
 		//ParameterExpression<String> parameter = cb.parameter(String.class);
 
-		//cq.select(root.<String>get("sgPostoGraduacao")).where(cb.equal(root.get(PostoGraduacao_.dsPostoGraduacao),sgPostoGraduacao));
 		cq.select(root.<String>get(PostoGraduacao_.dsPostoGraduacao)).where(cb.equal(root.get(PostoGraduacao_.sgPostoGraduacao),sgPostoGraduacao));
 		TypedQuery<String> typedQuery = em.createQuery(cq);
-		//typedQuery.setParameter(parameter, id);
 		String descricao = (String)typedQuery.getSingleResult();
 		return descricao;
 	}
-
 }

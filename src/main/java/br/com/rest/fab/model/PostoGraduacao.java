@@ -18,8 +18,8 @@ import br.com.rest.fab.util.EntityBase;
 
 @XmlRootElement
 @Entity
-@Table(name="tb_posto_graduacao_fab")
-public class PostoGraduacao implements EntityBase,  Serializable {
+@Table(name = "tb_posto_graduacao_fab")
+public class PostoGraduacao implements EntityBase, Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -29,29 +29,28 @@ public class PostoGraduacao implements EntityBase,  Serializable {
 	private Soldo fkSoldo;
 	private Patente patente;
 	private ImagemInsigniaFAB fkInsignia;
-    private byte[] insignia;
- 
-	public PostoGraduacao() {}		
+	private byte[] insignia;
+
+	public PostoGraduacao() {
+	}
 
 	public PostoGraduacao(Patente patente, Soldo fkSoldo) {
 		this.patente = patente;
 		this.fkSoldo = fkSoldo;
-		//this.insigniaFAB = insigniaFAB;
-	}		
+	}
 
-
-	public PostoGraduacao(Long identificador, String dsPostoGraduacao, String sgPostoGraduacao, Patente patente, Soldo fkSoldo) { 
-		this.identificador =identificador; 
+	public PostoGraduacao(Long identificador, String dsPostoGraduacao, String sgPostoGraduacao, Patente patente,
+			Soldo fkSoldo) {
+		this.identificador = identificador;
 		this.dsPostoGraduacao = dsPostoGraduacao;
-		this.sgPostoGraduacao = sgPostoGraduacao; 
+		this.sgPostoGraduacao = sgPostoGraduacao;
 		this.patente = patente;
 		this.fkSoldo = fkSoldo;
-		//this.insigniaFAB = insigniaFAB; 
 	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="identificador")
+	@Column(name = "identificador")
 	@Override
 	public Long getIdentificador() {
 		return identificador;
@@ -61,7 +60,7 @@ public class PostoGraduacao implements EntityBase,  Serializable {
 		this.identificador = identificador;
 	}
 
-	@Column(name="dsPostoGraduacao")
+	@Column(name = "dsPostoGraduacao")
 	@NotNull
 	public String getDsPostoGraduacao() {
 		return dsPostoGraduacao;
@@ -71,7 +70,7 @@ public class PostoGraduacao implements EntityBase,  Serializable {
 		this.dsPostoGraduacao = dsPostoGraduacao;
 	}
 
-	@Column(name="sgPostoGraduacao")
+	@Column(name = "sgPostoGraduacao")
 	@NotNull
 	public String getSgPostoGraduacao() {
 		return sgPostoGraduacao;
@@ -101,38 +100,26 @@ public class PostoGraduacao implements EntityBase,  Serializable {
 		this.patente = patente;
 	}
 
-
-	/*@ManyToOne
-	@JoinColumn(name = "fkInsignia")
-	public ImagemInsigniaFAB getInsigniaFAB() { 
-		return insigniaFAB; 
+	@Lob
+	@Column(name = "insignia")
+	public byte[] getInsignia() {
+		return insignia;
 	}
 
-	public void setInsigniaFAB(ImagemInsigniaFAB insigniaFAB) { 
-		this.insigniaFAB = insigniaFAB; 
-	}*/
+	public void setInsignia(byte[] insignia) {
+		this.insignia = insignia;
+	}
 
-	
-	 @Lob
-	 @Column(name ="insignia") 
-	 public byte[] getInsignia() { 
-		 return insignia; 
-	 }
-	  
-	 public void setInsignia(byte[] insignia) { 
-		 this.insignia = insignia; 
-	 }
-	 
 	@ManyToOne
-	@JoinColumn(name = "fkInsignia") 
+	@JoinColumn(name = "fkInsignia")
 	public ImagemInsigniaFAB getFkInsignia() {
 		return fkInsignia;
 	}
-	
+
 	public void setFkInsignia(ImagemInsigniaFAB fkInsignia) {
 		this.fkInsignia = fkInsignia;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -143,9 +130,12 @@ public class PostoGraduacao implements EntityBase,  Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (this.getClass() != obj.getClass()) return false;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass())
+			return false;
 		PostoGraduacao other = (PostoGraduacao) obj;
 		return identificador != null && identificador.equals(other.getIdentificador());
 	}

@@ -1,8 +1,9 @@
 
-**api-rest-postograduacao** 
+** api-rest-postograduacao ** 
 =============================
 
-*Tecnologias: CDI WELD, JSF, HIBERNATE JPA , EJB, JPA, JAX-RS e Jersey
+* WebService RESTful java com os postos e graduações das carreiras das foças armadas. *
+* Tecnologias: CDI WELD, JSF, HIBERNATE JPA, JPA, JAX-RS e Jersey
 Resumo: WebService RESTful com os postos e graduações dos militares das forças armadas.
 
  | What is it? |

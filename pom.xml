@@ -19,7 +19,7 @@
 	</licenses>
 
 	<properties>
-		
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- JBoss dependency versions -->
@@ -60,7 +60,7 @@
 
 	<dependencies>
 
-       <!-- CDI API --> 
+		<!-- CDI API -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
@@ -82,11 +82,11 @@
 		</dependency>
 
 		<dependency>
-          <groupId>org.hibernate</groupId>
-          <artifactId>hibernate-core</artifactId>
-          <version>5.4.2.Final</version>
-          <scope>provided</scope>
-         </dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.2.Final</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- JPA(HIBERNATE METAMODEL) -->
 		<dependency>
@@ -103,22 +103,22 @@
 			<scope>provided</scope>
 		</dependency>
 
-        <!-- JSF API -->
+		<!-- JSF API -->
 		<dependency>
 			<groupId>org.jboss.spec.javax.faces</groupId>
 			<artifactId>jboss-jsf-api_2.2_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
-        
-        <!-- MYSQL  Connector --> 
+
+		<!-- MYSQL Connector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.14</version>
-		    <scope>provided</scope>
+			<scope>provided</scope>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.jboss/jandex -->
+
+		<!-- Jandex JBoss -->
 		<dependency>
 			<groupId>org.jboss</groupId>
 			<artifactId>jandex</artifactId>
@@ -126,13 +126,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet -->
+		<!-- Glassfish Jersey Containers -->
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.25</version>
 		</dependency>
 
+        <!-- Glassfish Jersey Core -->
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-server</artifactId>
@@ -168,7 +169,7 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>7.0</version>
-		</dependency> 
+		</dependency>
 
 	</dependencies>
 
@@ -185,7 +186,7 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
@@ -214,7 +215,7 @@
 		</profile>
 
 		<profile>
-          <id>arq-wildfly-managed</id>
+			<id>arq-wildfly-managed</id>
 			<dependencies>
 				<dependency>
 					<groupId>org.wildfly</groupId>
