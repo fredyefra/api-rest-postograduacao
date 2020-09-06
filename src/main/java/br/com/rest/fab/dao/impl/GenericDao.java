@@ -25,7 +25,7 @@ import br.com.rest.fab.util.EntityBase;
 @Stateless
 public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IGenericDao<T> {
 
-	@PersistenceContext(name = "POSTO_GRADUACAO_PU")
+	@PersistenceContext(name ="POSTO_GRADUACAO_PU")
 	private EntityManager em;
 
 	@Override

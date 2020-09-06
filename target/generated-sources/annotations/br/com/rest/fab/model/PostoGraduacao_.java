@@ -9,7 +9,6 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class PostoGraduacao_ {
 
 	public static volatile SingularAttribute<PostoGraduacao, Soldo> fkSoldo;
-	public static volatile SingularAttribute<PostoGraduacao, byte[]> insignia;
 	public static volatile SingularAttribute<PostoGraduacao, String> dsPostoGraduacao;
 	public static volatile SingularAttribute<PostoGraduacao, ImagemInsigniaFAB> fkInsignia;
 	public static volatile SingularAttribute<PostoGraduacao, Long> identificador;

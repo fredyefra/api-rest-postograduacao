@@ -17,16 +17,14 @@ public class ApplicationWS extends Application {
 		set.add(FabResources.class);
 		return set;
 	}
-	
+
 	@Override
 	public Map<String, Object> getProperties() {
-		
+
 		Map<String, Object> properties = new HashMap<>();
-		
+
 		properties.put("jersey.config.server.provider.packages", "br.com.rest.fab");
-		
+
 		return properties;
 	}
-
-
 }

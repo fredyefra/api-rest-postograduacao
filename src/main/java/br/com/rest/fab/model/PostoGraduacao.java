@@ -8,12 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-
 import br.com.rest.fab.util.EntityBase;
 
 @XmlRootElement
@@ -29,7 +27,7 @@ public class PostoGraduacao implements EntityBase, Serializable {
 	private Soldo fkSoldo;
 	private Patente patente;
 	private ImagemInsigniaFAB fkInsignia;
-	private byte[] insignia;
+	//private byte[] insignia;
 
 	public PostoGraduacao() {
 	}
@@ -99,17 +97,7 @@ public class PostoGraduacao implements EntityBase, Serializable {
 	public void setPatente(Patente patente) {
 		this.patente = patente;
 	}
-
-	@Lob
-	@Column(name = "insignia")
-	public byte[] getInsignia() {
-		return insignia;
-	}
-
-	public void setInsignia(byte[] insignia) {
-		this.insignia = insignia;
-	}
-
+ 
 	@ManyToOne
 	@JoinColumn(name = "fkInsignia")
 	public ImagemInsigniaFAB getFkInsignia() {

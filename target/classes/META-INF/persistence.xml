@@ -6,10 +6,6 @@
 
 	<persistence-unit name="POSTO_GRADUACAO_PU">
 
-		<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
-		<!--  <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
-		<!-- <jta-data-source>java:jboss/datasources/api-rest-postograduacaoDS</jta-data-source> -->
-		
 		<class>br.com.rest.fab.model.PostoGraduacao</class>
 		<class>br.com.rest.fab.model.Soldo</class>
 		<class>br.com.rest.fab.model.Patente</class>
@@ -20,16 +16,21 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/base_fab" />
             <property name="javax.persistence.jdbc.user" value="dbamaster" />
             <property name="javax.persistence.jdbc.password" value="52xmax!" />
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" /> 
 			
 			<!-- Aqui o trecho original --> 
 			<!-- <property name="hibernate.hbm2ddl.auto" value="update" /> -->
 			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" /> -->
-			<property name="hibernate.show_sql" value="true" />
+			<!--  <property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-		    <property name="hibernate.format_sql" value="true"/>
+		    <property name="hibernate.format_sql" value="true"/> -->
+			
+			
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+		    
 			
 		</properties>
 	</persistence-unit>
 </persistence>
-
