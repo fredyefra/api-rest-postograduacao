@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+
 import br.com.rest.fab.util.EntityBase;
 
 @XmlRootElement
@@ -25,15 +26,15 @@ public class PostoGraduacao implements EntityBase, Serializable {
 	private String dsPostoGraduacao;
 	private String sgPostoGraduacao;
 	private Soldo fkSoldo;
-	private Patente patente;
+	private Patente fkPatente;
 	private ImagemInsigniaFAB fkInsignia;
 	//private byte[] insignia;
 
 	public PostoGraduacao() {
 	}
 
-	public PostoGraduacao(Patente patente, Soldo fkSoldo) {
-		this.patente = patente;
+	public PostoGraduacao(Patente fkPatente, Soldo fkSoldo) {
+		this.fkPatente = fkPatente;
 		this.fkSoldo = fkSoldo;
 	}
 
@@ -42,7 +43,7 @@ public class PostoGraduacao implements EntityBase, Serializable {
 		this.identificador = identificador;
 		this.dsPostoGraduacao = dsPostoGraduacao;
 		this.sgPostoGraduacao = sgPostoGraduacao;
-		this.patente = patente;
+		this.fkPatente = patente;
 		this.fkSoldo = fkSoldo;
 	}
 
@@ -90,14 +91,14 @@ public class PostoGraduacao implements EntityBase, Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "fkPatente")
-	public Patente getPatente() {
-		return patente;
+	public Patente getFkPatente() {
+		return fkPatente;
 	}
 
-	public void setPatente(Patente patente) {
-		this.patente = patente;
+	public void setFkPatente(Patente fkPatente) {
+		this.fkPatente = fkPatente;
 	}
- 
+
 	@ManyToOne
 	@JoinColumn(name = "fkInsignia")
 	public ImagemInsigniaFAB getFkInsignia() {

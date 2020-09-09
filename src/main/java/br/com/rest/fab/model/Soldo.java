@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import br.com.rest.fab.util.EntityBase;
@@ -23,7 +22,6 @@ public class Soldo implements EntityBase, Serializable {
 	private Long identificador;
 	private String remuneracao;
     
-	
     public Soldo() {}
 
 	@Id
@@ -68,5 +66,4 @@ public class Soldo implements EntityBase, Serializable {
 	public String toString() {
 		return "**** IDENTIFICADOR **** " + this + identificador;
 	}
-	
 }

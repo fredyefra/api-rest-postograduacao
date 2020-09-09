@@ -1,7 +1,6 @@
 package br.com.rest.fab.dao.impl;
 
 import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,9 +10,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
-
-
-
 import br.com.rest.fab.model.Patente;
 import br.com.rest.fab.model.Patente_;
 import br.com.rest.fab.model.PostoGraduacao;
@@ -99,10 +95,10 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 		Path<Long> identificador = postoGraduacao.get(PostoGraduacao_.identificador); 		
 		Path<String> posto = postoGraduacao.get(PostoGraduacao_.dsPostoGraduacao);
 		Path<String> sigla = postoGraduacao.get(PostoGraduacao_.sgPostoGraduacao); 		
-		Path<Patente> patente = postoGraduacao.get(PostoGraduacao_.patente);
+		Path<Patente> patente = postoGraduacao.get(PostoGraduacao_.fkPatente);
 		Path<Soldo> soldo = postoGraduacao.get(PostoGraduacao_.fkSoldo);
 		
-		Join<PostoGraduacao , Patente> join = postoGraduacao.join(PostoGraduacao_.patente);
+		Join<PostoGraduacao , Patente> join = postoGraduacao.join(PostoGraduacao_.fkPatente);
 		
 		cq.multiselect(identificador,posto,sigla,patente,soldo)
 		.where(cb.like(join.get(Patente_.patente), "%"+patentes+"%"));

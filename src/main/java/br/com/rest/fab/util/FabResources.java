@@ -15,21 +15,17 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import br.com.rest.fab.dao.IGenericDao;
-import br.com.rest.fab.dao.impl.GenericDao;
 import br.com.rest.fab.model.PostoGraduacao;
 
 @Path("/fab")
-/*@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
-@Consumes(MediaType.APPLICATION_JSON + ";charset=utf-8")*/
 @Produces({MediaType.APPLICATION_JSON + ";charset=UTF-8"})
 @Consumes({MediaType.APPLICATION_JSON + ";charset=UTF-8"})
 public class FabResources {
 
 	@Inject
 	private IGenericDao<PostoGraduacao> dao;
-	//private GenericDao<PostoGraduacao> dao = new GenericDao<PostoGraduacao>(); 
-
-	@GET
+	 
+    @GET
 	public List<PostoGraduacao> findAll(){
 		List<PostoGraduacao> postosGraduacoes = dao.findAll();
 	 	return postosGraduacoes;
