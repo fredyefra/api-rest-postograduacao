@@ -1,12 +1,12 @@
 #ignore all png images
-#ignore png
-#*.png
+ignore png
+*.png
 
 
-image/*
+image/
 
 
-#src/main/webapp/resources/image/**/
+src/main/webapp/resources/image/**/
 
-#src/main/webapp/resources/image/
+src/main/webapp/resources/image/
 
