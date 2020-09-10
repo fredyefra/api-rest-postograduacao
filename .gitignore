@@ -2,6 +2,10 @@
 *.png
 
 #ignore diretory
-src/main/webapp/resources/image
+src/main/webapp/resources/image/*.png
+
+
+#ignore images
+/src/main/webapp/resources/image/
 
 
