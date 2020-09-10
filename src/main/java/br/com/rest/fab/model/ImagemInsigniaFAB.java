@@ -22,7 +22,6 @@ public class ImagemInsigniaFAB implements EntityBase, Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long identificador;
 	private byte[] insignia;
-	//private String url;
 	
 	public ImagemInsigniaFAB() {}
 	
@@ -47,15 +46,4 @@ public class ImagemInsigniaFAB implements EntityBase, Serializable {
 	public void setInsignia(byte[] insignia) {
 		this.insignia = insignia;
 	}
-
-	/*
-	 * @Column(name ="url") public String getUrl() { return url; }
-	 * 
-	 * public void setUrl(String url) { this.url = url; }
-	 */
-	
-	/*
-	 * @Override public String toString() { return "**** IDENTIFICADOR **** " + this
-	 * + identificador; }
-	 */
 }
