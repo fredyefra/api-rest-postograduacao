@@ -1,4 +1,4 @@
 #ignore all png images
-*.png
+src/main/webapp/resources/image/
 
 
