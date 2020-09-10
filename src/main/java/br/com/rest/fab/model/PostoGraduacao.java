@@ -21,15 +21,13 @@ import br.com.rest.fab.util.EntityBase;
 public class PostoGraduacao implements EntityBase, Serializable {
 
 	private static final long serialVersionUID = 1L;
-
 	private Long identificador;
 	private String dsPostoGraduacao;
 	private String sgPostoGraduacao;
 	private Soldo fkSoldo;
 	private Patente fkPatente;
 	private ImagemInsigniaFAB fkInsignia;
-	//private byte[] insignia;
-
+	
 	public PostoGraduacao() {
 	}
 
