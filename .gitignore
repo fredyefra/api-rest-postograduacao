@@ -1,2 +1,8 @@
 #ignore all png
-*.png, *.jpg, *.gif
+*.png
+
+#ignore all jpg
+*.jpg
+
+#ignore all gif
+*.gif
