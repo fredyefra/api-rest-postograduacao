@@ -2,4 +2,11 @@
 *.png
 
 
+/webapp/resources/image/.png
+
+src/main/webapp/resources/image/.png
+
+/main/webapp/resources/image/.png
+
+
 
