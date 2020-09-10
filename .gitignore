@@ -2,5 +2,10 @@
 *.png
 
 
-image/*
+image/**
+
+
+src/main/webapp/resources/image/**/
+
+src/main/webapp/resources/image/
 
