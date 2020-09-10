@@ -1,5 +1,5 @@
 #ignore all png images
-*.png
+/*.png
 
 #ignore diretory
 src/main/webapp/resources/image/*.png
