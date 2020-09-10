@@ -1,9 +1,9 @@
 #ignore all png images
-image
+ignore png
 *.png
 
 
-image/**
+image/
 
 
 src/main/webapp/resources/image/**/
