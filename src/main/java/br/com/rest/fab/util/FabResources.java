@@ -1,6 +1,5 @@
 package br.com.rest.fab.util;
 import java.util.List;
-
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -55,33 +54,4 @@ public class FabResources {
 		dao.delete(id);
 		return Response.status(Status.OK).build();
 	}
-	
-	
-	/*
-	 * @GET
-	 * 
-	 * @Path("/remuneracao/{remuneracao}") public PostoGraduacao findById
-	 * (@PathParam("remuneracao")String remuneracao){ PostoGraduacao postosGraduacao
-	 * = dao.findByRemuneracao(remuneracao); return postosGraduacao; }
-	 * 
-	 * @GET
-	 * 
-	 * @Path("/posto/{posto}") public PostoGraduacao
-	 * findByPostoGraduacao(@PathParam("posto")String posto) { PostoGraduacao
-	 * postoGraduacao = dao.findByPostoGraduacao(posto); return postoGraduacao; }
-	 * 
-	 * 
-	 * 
-	 * @GET
-	 * 
-	 * @Path("/patente/{patentes}") public List<PostoGraduacao> findByPatente
-	 * (@PathParam("patentes") String patentes){ List<PostoGraduacao> patente =
-	 * dao.findByPatente(patentes); return patente; }
-	 * 
-	 * @GET
-	 * 
-	 * @Path("/sigla/{sigla}") public String findBySigla(@PathParam("sigla")String
-	 * sigla) { String sgPostoGraduacao = dao.findBySigla(sigla); return
-	 * sgPostoGraduacao; }
-	 */
 }

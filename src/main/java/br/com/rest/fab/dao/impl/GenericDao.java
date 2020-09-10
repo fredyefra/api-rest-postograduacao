@@ -19,9 +19,9 @@ import br.com.rest.fab.model.Soldo_;
 import br.com.rest.fab.util.EntityBase;
 
 @Stateless
-public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IGenericDao<T> {
+public class GenericDao<T extends EntityBase> implements br.com.rest.fab.dao.IGenericDao<T> {
 
-	@PersistenceContext(name ="POSTO_GRADUACAO_PU")
+	@PersistenceContext(name = "POSTO_GRADUACAO_PU")
 	private EntityManager em;
 
 	@Override
@@ -29,13 +29,13 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<PostoGraduacao> cq = cb.createQuery(PostoGraduacao.class);
 		Root<PostoGraduacao> postoGraduacao = cq.from(PostoGraduacao.class);
-		
+
 		cq.select(postoGraduacao);
 		TypedQuery<PostoGraduacao> query = em.createQuery(cq);
-		
+
 		return query.getResultList();
 	}
-	
+
 	@Override
 	public PostoGraduacao findById(Long param) {
 		return em.find(PostoGraduacao.class, param);
@@ -44,32 +44,31 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 	@Override
 	public void save(PostoGraduacao postoGraduacao) {
 		em.persist(postoGraduacao);
-    }
-	
+	}
+
 	@Override
 	public PostoGraduacao update(PostoGraduacao postoGraduacao) {
 		return em.merge(postoGraduacao);
 	}
-	
+
 	@Override
 	public void delete(Long param) {
-	    PostoGraduacao postoGraduacao = em.find(PostoGraduacao.class, param);  	
+		PostoGraduacao postoGraduacao = em.find(PostoGraduacao.class, param);
 		em.remove(postoGraduacao);
 	}
-	
+
 	@Override
 	public PostoGraduacao findByRemuneracao(String remuneracao) {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<PostoGraduacao> cq = cb.createQuery(PostoGraduacao.class);
 		Root<PostoGraduacao> postoGraduacao = cq.from(PostoGraduacao.class);
-		Join<PostoGraduacao, Soldo> join = postoGraduacao.join(PostoGraduacao_.fkSoldo); 
-		
-		cq.select(postoGraduacao)
-		  .where(cb.equal(join.get(Soldo_.remuneracao),remuneracao));
-		
+		Join<PostoGraduacao, Soldo> join = postoGraduacao.join(PostoGraduacao_.fkSoldo);
+
+		cq.select(postoGraduacao).where(cb.equal(join.get(Soldo_.remuneracao), remuneracao));
+
 		TypedQuery<PostoGraduacao> query = em.createQuery(cq);
-		
-		return query.getSingleResult();	
+
+		return query.getSingleResult();
 	}
 
 	@Override
@@ -77,50 +76,50 @@ public class GenericDao <T extends EntityBase> implements br.com.rest.fab.dao.IG
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<PostoGraduacao> cq = cb.createQuery(PostoGraduacao.class);
 		Root<PostoGraduacao> root = cq.from(PostoGraduacao.class);
-		
-        cq.select(root)
-		  .where(cb.equal(root.get(PostoGraduacao_.dsPostoGraduacao), dsPostoGraduacao));
-		
-        TypedQuery<PostoGraduacao> query = em.createQuery(cq);
-		
-        return query.getSingleResult();
+
+		cq.select(root).where(cb.equal(root.get(PostoGraduacao_.dsPostoGraduacao), dsPostoGraduacao));
+
+		TypedQuery<PostoGraduacao> query = em.createQuery(cq);
+
+		return query.getSingleResult();
 	}
 
-    @Override
+	@Override
 	public List<PostoGraduacao> findByPatente(String patentes) {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<PostoGraduacao> cq = cb.createQuery(PostoGraduacao.class);
 		Root<PostoGraduacao> postoGraduacao = cq.from(PostoGraduacao.class);
-		
-		Path<Long> identificador = postoGraduacao.get(PostoGraduacao_.identificador); 		
+
+		Path<Long> identificador = postoGraduacao.get(PostoGraduacao_.identificador);
 		Path<String> posto = postoGraduacao.get(PostoGraduacao_.dsPostoGraduacao);
-		Path<String> sigla = postoGraduacao.get(PostoGraduacao_.sgPostoGraduacao); 		
+		Path<String> sigla = postoGraduacao.get(PostoGraduacao_.sgPostoGraduacao);
 		Path<Patente> patente = postoGraduacao.get(PostoGraduacao_.fkPatente);
 		Path<Soldo> soldo = postoGraduacao.get(PostoGraduacao_.fkSoldo);
-		
-		Join<PostoGraduacao , Patente> join = postoGraduacao.join(PostoGraduacao_.fkPatente);
-		
-		cq.multiselect(identificador,posto,sigla,patente,soldo)
-		.where(cb.like(join.get(Patente_.patente), "%"+patentes+"%"));
-		
+
+		Join<PostoGraduacao, Patente> join = postoGraduacao.join(PostoGraduacao_.fkPatente);
+
+		cq.multiselect(identificador, posto, sigla, patente, soldo)
+				.where(cb.like(join.get(Patente_.patente), "%" + patentes + "%"));
+
 		// Nome Exato com EQUAL cq.where(cb.like(pet.get(Pet_.name)), "*do");
-		// .where(cb.equal(join.get(Patente_.patente), patentes));		  
-		
+		// .where(cb.equal(join.get(Patente_.patente), patentes));
+
 		TypedQuery<PostoGraduacao> query = em.createQuery(cq);
-		
+
 		return query.getResultList();
 
 	}
-	
-    public String findBySigla(String sgPostoGraduacao) {
+
+	public String findBySigla(String sgPostoGraduacao) {
 		CriteriaBuilder cb = em.getCriteriaBuilder();
 		CriteriaQuery<String> cq = cb.createQuery(String.class);
 		Root<PostoGraduacao> root = cq.from(PostoGraduacao.class);
-		//ParameterExpression<String> parameter = cb.parameter(String.class);
+		// ParameterExpression<String> parameter = cb.parameter(String.class);
 
-		cq.select(root.<String>get(PostoGraduacao_.dsPostoGraduacao)).where(cb.equal(root.get(PostoGraduacao_.sgPostoGraduacao),sgPostoGraduacao));
+		cq.select(root.<String>get(PostoGraduacao_.dsPostoGraduacao))
+				.where(cb.equal(root.get(PostoGraduacao_.sgPostoGraduacao), sgPostoGraduacao));
 		TypedQuery<String> typedQuery = em.createQuery(cq);
-		String descricao = (String)typedQuery.getSingleResult();
+		String descricao = (String) typedQuery.getSingleResult();
 		return descricao;
 	}
 }
