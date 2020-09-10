@@ -2,8 +2,5 @@
 *.png
 
 
-images/**/*.png
-
-image/**/*.png
-
+image/*
 
